@@ -4,6 +4,7 @@ import 'package:quickbite/themes/theme_provider.dart';
 
 import 'pages/login_page.dart';
 
+
 void main() {
   runApp(
     ChangeNotifierProvider(create: (context) => ThemeProvider(),
