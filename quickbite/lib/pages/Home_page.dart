@@ -15,8 +15,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Home"),
+        backgroundColor: Theme.of(context).colorScheme.background,
       ),
       drawer: MyDrawer(),
+      backgroundColor: Theme.of(context).colorScheme.background,
     );
   }
 }
