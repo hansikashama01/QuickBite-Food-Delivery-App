@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quickbite/comonents/my_sliver_app_bar.dart';
 
 import '../comonents/my_drawer.dart';
 
@@ -13,12 +14,20 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Home"),
-        backgroundColor: Theme.of(context).colorScheme.background,
-      ),
+      
       drawer: MyDrawer(),
-      backgroundColor: Theme.of(context).colorScheme.background,
+     
+      body: NestedScrollView(
+        headerSliverBuilder: (context, innerBoxIsScrolled) => [
+          MysliverAppBar(
+            child: Text('Hellow'),
+            
+            title: Text("title"),
+          )
+        ],
+        body: Container(color: Colors.blue,),
+      ),
+      
     );
   }
 }
